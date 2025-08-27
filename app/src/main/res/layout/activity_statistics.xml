@@ -1,0 +1,185 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_dashboard"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Page Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reading Statistics"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Card for Stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
+            android:elevation="6dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Total Books -->
+            <TextView
+                android:id="@+id/tvTotalBooks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Books: 0"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Books in Progress -->
+            <TextView
+                android:id="@+id/tvBooksInProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Books in Progress: 0"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Total Pages Read -->
+            <TextView
+                android:id="@+id/tvPagesRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pages Read: 0"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Overall Progress -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall Progress"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="6dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressOverall"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:progress="0"
+                android:progressTint="#448AFF"
+                android:backgroundTint="#B0BEC5"
+                android:layout_marginBottom="12dp"
+                android:indeterminate="false"
+                android:clipToOutline="true"/>
+
+            <!-- Favorite Genre -->
+            <TextView
+                android:id="@+id/tvFavoriteGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite Genre: N/A"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+        <!-- Fake Pie Chart Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
+            android:elevation="6dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reading Genres"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Fake Pie Chart Using Colored Views -->
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_bg">
+
+                <!-- Top Slice -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FF7043"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="0dp"/>
+
+                <!-- Bottom Slice -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#42A5F5"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="0dp"/>
+            </FrameLayout>
+
+            <!-- Genre Legend -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="#FF7043"
+                        android:layout_marginEnd="8dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fiction"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="#42A5F5"
+                        android:layout_marginEnd="8dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Non-Fiction"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
