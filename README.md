@@ -1,4 +1,4 @@
-# ShelfMate - [Your App's Tagline or Brief Description]
+# ShelfMate 
 
 ShelfMate is an Android application designed to help users [describe the core purpose, e.g., "organize their book collection," "manage their pantry items," "discover new products"].
 
